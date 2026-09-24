@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sisi Kreatif — Studio Desain Grafis & Web</title>
+<meta name="description" content="Sisi Kreatif membantu brand tampil lebih kuat lewat desain grafis untuk media sosial dan pengembangan website.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a href="#" class="logo"><span class="logo-text"><span class="logo-navy">SISI</span> <span class="logo-gold">KREATIF</span></span></a>
+    <ul class="nav-links">
+      <li><a href="#layanan">Layanan</a></li>
+      <li><a href="#portofolio">Portofolio</a></li>
+      <li><a href="#review">Review</a></li>
+      <li><a href="#tentang">Tentang</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+    </ul>
+    <button class="cart-btn" id="open-cart">
+      🛒 Keranjang <span class="cart-count" id="cart-count">0</span>
+    </button>
+  </nav>
+</header>
+
+<section class="hero">
+  <video class="hero-video" autoplay muted loop playsinline poster="assets/hero-poster.jpg">
+    <source src="assets/hero-video.mp4" type="video/mp4">
+  </video>
+  <div class="hero-video-overlay"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-tags">
+      <span class="star">★ Studio kreatif</span>
+      <span>Desain Grafis</span>
+      <span>Desain Web</span>
+      <span>Sosial Media</span>
+    </div>
+    <h1>Bukti nyata bikin brand Anda terlihat lebih hidup.</h1>
+    <p>Sisi Kreatif merancang identitas visual media sosial dan website yang membuat audiens berhenti scroll — dari konten harian sampai halaman jualan yang rapi dan cepat.</p>
+    <div class="hero-actions">
+      <a href="#layanan" class="btn">Lihat Layanan</a>
+      <a href="https://wa.me/6289510579739" target="_blank" rel="noopener" class="btn btn-ghost">Hubungi via WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="layanan">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Yang kami kerjakan</span>
+        <h2>Layanan</h2>
+      </div>
+      <p>Setiap layanan disesuaikan dengan kebutuhan brand — dari konten mingguan hingga proyek website lengkap.</p>
+    </div>
+
+    <div class="hscroll-wrap">
+      <button class="hscroll-arrow left" data-target="services-list" aria-label="Geser ke kiri">‹</button>
+      <div class="card-grid hscroll" id="services-list">
+        <div class="empty-state">Memuat layanan…</div>
+      </div>
+      <button class="hscroll-arrow right" data-target="services-list" aria-label="Geser ke kanan">›</button>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="portofolio">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Hasil kerja kami</span>
+        <h2>Portofolio</h2>
+      </div>
+      <p>Beberapa proyek yang sudah kami kerjakan untuk klien. Klik untuk lihat detailnya.</p>
+    </div>
+
+    <div class="hscroll-wrap">
+      <button class="hscroll-arrow left" data-target="portfolio-list" aria-label="Geser ke kiri">‹</button>
+      <div class="card-grid hscroll" id="portfolio-list">
+        <div class="empty-state">Memuat portofolio…</div>
+      </div>
+      <button class="hscroll-arrow right" data-target="portfolio-list" aria-label="Geser ke kanan">›</button>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="review">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Kata klien kami</span>
+        <h2>Review</h2>
+      </div>
+    </div>
+
+    <div class="hscroll-wrap">
+      <button class="hscroll-arrow left" data-target="review-list" aria-label="Geser ke kiri">‹</button>
+      <div class="review-grid hscroll" id="review-list">
+        <div class="empty-state">Memuat review…</div>
+      </div>
+      <button class="hscroll-arrow right" data-target="review-list" aria-label="Geser ke kanan">›</button>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="tentang">
+  <div class="wrap about-grid">
+    <div>
+      <span class="eyebrow">Tentang kami</span>
+      <h2 style="font-size: clamp(1.8rem, 3.4vw, 2.5rem); margin-bottom: 22px;">Studio kecil, standar kerja yang rapi.</h2>
+      <p>Sisi Kreatif adalah studio desain yang fokus membantu bisnis kecil dan menengah punya kehadiran visual yang konsisten — di media sosial maupun di website mereka sendiri.</p>
+      <p>Kami percaya desain yang baik bukan soal ramai, tapi soal jelas: pesan brand sampai ke audiens tanpa perlu dijelaskan dua kali.</p>
+    </div>
+    <ul class="stat-list">
+      <li><span>Fokus layanan</span><b>Desain grafis &amp; web</b></li>
+      <li><span>Cara kerja</span><b>Revisi terbuka sampai pas</b></li>
+      <li><span>Mulai proyek</span><b>Konsultasi via WhatsApp</b></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="kontak">
+  <div class="wrap">
+    <div class="contact-box">
+      <h2>Punya proyek yang ingin didiskusikan?</h2>
+      <div class="contact-links">
+        <a href="https://wa.me/6289510579739" target="_blank" rel="noopener">WhatsApp — +62 895-1057-9739</a>
+        <a href="mailto:sisikreatif_gsk@gmail.com">sisikreatif_gsk@gmail.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap">
+  <span>© <span id="year"></span> Sisi Kreatif</span>
+  <a href="admin.html" style="color: var(--text-faint);">Admin</a>
+</footer>
+
+<!-- DETAIL MODAL (dipakai untuk layanan & portofolio) -->
+<div class="detail-overlay" id="detail-overlay">
+  <div class="detail-modal" id="detail-modal">
+    <button class="detail-close" id="detail-close">✕</button>
+    <div id="detail-media-wrap"></div>
+    <div class="detail-body" id="detail-body"></div>
+  </div>
+</div>
+
+<!-- CART DRAWER -->
+<div class="overlay" id="cart-overlay"></div>
+<div class="drawer" id="cart-drawer">
+  <div class="drawer-head">
+    <h2>Keranjang Anda</h2>
+    <button class="close-btn" id="close-cart">✕</button>
+  </div>
+  <div class="drawer-body" id="cart-body"></div>
+  <div class="drawer-foot">
+    <div class="total-row"><span>Total</span><span id="cart-total">Rp0</span></div>
+    <button class="btn-checkout" id="checkout-btn">Checkout</button>
+  </div>
+</div>
+
+<!-- CHECKOUT MODAL -->
+<div class="modal-overlay" id="checkout-overlay">
+  <div class="modal">
+
+    <!-- Step 1: data pelanggan + ringkasan -->
+    <div id="checkout-step-1">
+      <div class="step-dot"><span class="active"></span><span></span></div>
+      <h2>Konfirmasi pesanan</h2>
+      <p class="step-label">Cek pesanan jasa Anda dan isi data berikut.</p>
+
+      <div class="field">
+        <label for="cust-name">Nama Anda</label>
+        <input type="text" id="cust-name" placeholder="Nama untuk pesanan">
+      </div>
+      <div class="field">
+        <label for="cust-note">Catatan (opsional)</label>
+        <textarea id="cust-note" rows="2" placeholder="Contoh: brief singkat, tenggat waktu, dll"></textarea>
+      </div>
+
+      <div class="summary-list" id="summary-list"></div>
+      <div class="total-row"><span>Total Bayar</span><span id="modal-total">Rp0</span></div>
+
+      <button class="btn-full btn-primary" id="to-payment-btn">Lanjut ke Pembayaran</button>
+      <button class="btn-full btn-secondary" id="back-to-cart-btn">Kembali</button>
+    </div>
+
+    <!-- Step 2: QRIS -->
+    <div id="checkout-step-2" style="display:none;">
+      <div class="step-dot"><span class="active"></span><span class="active"></span></div>
+      <h2>Scan &amp; Bayar</h2>
+      <p class="step-label">Scan QRIS di bawah ini pakai aplikasi e-wallet atau m-banking Anda.</p>
+
+      <div class="qris-box">
+        <img src="assets/qris.jpg" alt="QRIS Sisi Kreatif">
+        <div class="amount" id="qris-total">Rp0</div>
+      </div>
+
+      <button class="btn-full btn-primary" id="confirm-paid-btn">Saya Sudah Bayar — Konfirmasi via WhatsApp</button>
+      <button class="btn-full btn-secondary" id="back-to-step1-btn">Kembali</button>
+    </div>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase-client.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

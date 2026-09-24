@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin — Sisi Kreatif</title>
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="admin-shell">
+
+  <!-- LOGIN -->
+  <div class="login-screen" id="login-screen">
+    <div class="login-card">
+      <h1>Masuk admin</h1>
+      <p>Kelola daftar layanan Sisi Kreatif.</p>
+      <form id="login-form">
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" required autocomplete="username">
+        </div>
+        <div class="field">
+          <label for="password">Kata sandi</label>
+          <input type="password" id="password" required autocomplete="current-password">
+        </div>
+        <button type="submit" class="btn" style="width: 100%; justify-content: center;">Masuk</button>
+        <p class="form-msg" id="login-msg"></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div id="dashboard" style="display: none;">
+    <div class="admin-header">
+      <a href="index.html" class="logo"><span class="logo-text"><span class="logo-navy">SISI</span> <span class="logo-gold">KREATIF</span></span></a>
+      <div style="display:flex; align-items:center; gap:18px;">
+        <a href="index.html" target="_blank" style="color: var(--text-muted); font-size: 0.88rem;">Lihat web ↗</a>
+        <button id="logout-btn" class="icon-btn">Keluar</button>
+      </div>
+    </div>
+
+    <div class="wrap" style="padding-top: 28px;">
+      <div class="admin-tabs">
+        <button class="admin-tab active" data-tab="layanan">Layanan</button>
+        <button class="admin-tab" data-tab="portofolio">Portofolio</button>
+        <button class="admin-tab" data-tab="review">Review</button>
+      </div>
+    </div>
+
+    <!-- TAB: LAYANAN -->
+    <div class="admin-main tab-panel" id="tab-layanan">
+      <div class="panel">
+        <h2 id="form-title">Tambah layanan</h2>
+        <form id="service-form">
+          <input type="hidden" id="service-id">
+          <div class="field">
+            <label for="title">Nama layanan</label>
+            <input type="text" id="title" required placeholder="Contoh: Desain feed Instagram">
+          </div>
+          <div class="field">
+            <label for="category">Kategori</label>
+            <select id="category" required>
+              <option value="Desain Grafis">Desain Grafis</option>
+              <option value="Desain Web">Desain Web</option>
+              <option value="Sosial Media">Sosial Media</option>
+              <option value="Lainnya">Lainnya</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="description">Deskripsi singkat</label>
+            <textarea id="description" placeholder="Jelaskan cakupan layanan ini"></textarea>
+          </div>
+          <div class="field">
+            <label for="price">Harga (teks yang tampil di web)</label>
+            <input type="text" id="price" placeholder="Contoh: Mulai dari Rp500.000">
+          </div>
+          <div class="field">
+            <label for="price-numeric">Harga (angka, untuk keranjang &amp; checkout)</label>
+            <input type="number" id="price-numeric" min="0" step="1000" placeholder="Contoh: 500000">
+          </div>
+          <div class="field">
+            <label for="service-image">Gambar layanan</label>
+            <input type="file" id="service-image" accept="image/*">
+            <div id="service-image-preview" style="margin-top:10px;"></div>
+          </div>
+          <div style="display:flex; gap:10px;">
+            <button type="submit" class="btn" id="submit-btn" style="flex:1; justify-content:center;">Simpan layanan</button>
+            <button type="button" class="icon-btn" id="cancel-edit" style="display:none;">Batal</button>
+          </div>
+          <p class="form-msg" id="form-msg"></p>
+        </form>
+      </div>
+
+      <div class="panel">
+        <h2>Daftar layanan</h2>
+        <ul class="admin-list" id="admin-list">
+          <li class="empty-state">Memuat…</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TAB: PORTOFOLIO -->
+    <div class="admin-main tab-panel" id="tab-portofolio" style="display:none;">
+      <div class="panel">
+        <h2 id="portfolio-form-title">Tambah portofolio</h2>
+        <form id="portfolio-form">
+          <input type="hidden" id="portfolio-id">
+          <div class="field">
+            <label for="portfolio-title">Judul proyek</label>
+            <input type="text" id="portfolio-title" required placeholder="Contoh: Rebrand Kopi Senja">
+          </div>
+          <div class="field">
+            <label for="portfolio-description">Deskripsi</label>
+            <textarea id="portfolio-description" placeholder="Ceritakan singkat proyek ini"></textarea>
+          </div>
+          <div class="field">
+            <label for="portfolio-file">Upload gambar, video, atau dokumen</label>
+            <input type="file" id="portfolio-file" accept="image/*,video/*,.pdf,.doc,.docx">
+            <div id="portfolio-file-preview" style="margin-top:10px;"></div>
+          </div>
+          <div style="display:flex; gap:10px;">
+            <button type="submit" class="btn" id="portfolio-submit-btn" style="flex:1; justify-content:center;">Simpan portofolio</button>
+            <button type="button" class="icon-btn" id="portfolio-cancel-edit" style="display:none;">Batal</button>
+          </div>
+          <p class="form-msg" id="portfolio-form-msg"></p>
+        </form>
+      </div>
+
+      <div class="panel">
+        <h2>Daftar portofolio</h2>
+        <ul class="admin-list" id="portfolio-admin-list">
+          <li class="empty-state">Memuat…</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TAB: REVIEW -->
+    <div class="admin-main tab-panel" id="tab-review" style="display:none;">
+      <div class="panel">
+        <h2>Tambah review</h2>
+        <form id="review-form">
+          <div class="field">
+            <label for="client-name">Nama klien</label>
+            <input type="text" id="client-name" required placeholder="Contoh: Budi — Kopi Senja">
+          </div>
+          <div class="field">
+            <label for="rating">Rating</label>
+            <select id="rating">
+              <option value="5">★★★★★ (5)</option>
+              <option value="4">★★★★☆ (4)</option>
+              <option value="3">★★★☆☆ (3)</option>
+              <option value="2">★★☆☆☆ (2)</option>
+              <option value="1">★☆☆☆☆ (1)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="review-text">Isi review</label>
+            <textarea id="review-text" required placeholder="Tulis ulasan klien di sini"></textarea>
+          </div>
+          <button type="submit" class="btn" style="width:100%; justify-content:center;">Simpan review</button>
+          <p class="form-msg" id="review-form-msg"></p>
+        </form>
+      </div>
+
+      <div class="panel">
+        <h2>Daftar review</h2>
+        <ul class="admin-list" id="review-admin-list">
+          <li class="empty-state">Memuat…</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase-client.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
